@@ -1,4 +1,4 @@
-# debian-live
+# debian-live-xfce
 Builds a Debian 10 (Buster) Live x86-64 ISO monthly using GitHub Actions. Used primarily for backing up and restoring Linux and Windows based systems. This build includes xfce4 and gparted.
 
 
