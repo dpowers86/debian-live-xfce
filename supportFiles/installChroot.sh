@@ -4,6 +4,9 @@
 echo Set hostname
 echo "debian-live" > /etc/hostname
 
+# Set as non-interactive so apt does not prompt for user input
+export DEBIAN_FRONTEND=noninteractive
+
 echo Install security updates and apt-utils
 apt-get update
 apt-get -y install apt-utils
@@ -17,7 +20,7 @@ update-locale LANG=en_US.UTF-8
 
 echo Install packages
 apt-get install -y --no-install-recommends linux-image-amd64 live-boot systemd-sysv
-apt-get install -y bash-completion cifs-utils curl dbus dosfstools firmware-linux-free gddrescue gdisk iputils-ping isc-dhcp-client less nfs-common ntfs-3g openssh-client open-vm-tools procps vim wimtools wget
+apt-get install -y bash-completion cifs-utils curl dbus dbus-x11 dosfstools firmware-linux-free gddrescue gdisk gparted iputils-ping isc-dhcp-client less lightdm nfs-common ntfs-3g openssh-client open-vm-tools procps vim wimtools wget xfce4 xfce4-terminal
 
 echo Clean apt post-install
 apt-get clean
