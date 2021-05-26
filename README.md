@@ -1,5 +1,5 @@
 # debian-live
-Builds a Debian 10 (Buster) Live x86-64 ISO monthly using GitHub Actions. Used primarily for backing up and restoring Linux and Windows based systems.
+Builds a Debian 10 (Buster) Live x86-64 ISO monthly using GitHub Actions. Used primarily for backing up and restoring Linux and Windows based systems. This build includes xfce4 and gparted.
 
 
 
@@ -19,6 +19,8 @@ cifs-utils - Mount `Samba` and `Windows` file shares
 ddrescue - Backup and restore failing drives
 
 gdisk - `gpt` compatible `fdisk` toolset
+
+gparted - GTK front-end to GNU Parted
 
 nfs-common - mount `nfs` file shares
 
