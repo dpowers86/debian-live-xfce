@@ -29,8 +29,8 @@ echo Enable systemd-networkd as network manager
 systemctl enable systemd-networkd
 
 echo Enable autologin for lightdm
-sed -i 's/#autologin-user=/autologin-user=root/' lightdm.conf
-sed -i 's/#autologin-user-timeout=0/autologin-user-timeout=0/' lightdm.conf
+sed -i 's/#autologin-user=/autologin-user=root/' /etc/lightdm/lightdm.conf
+sed -i 's/#autologin-user-timeout=0/autologin-user-timeout=0/' /etc/lightdm/lightdm.conf
 
 echo Set resolv.conf to use systemd-resolved
 rm /etc/resolv.conf
