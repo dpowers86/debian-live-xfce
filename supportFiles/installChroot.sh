@@ -28,6 +28,10 @@ apt-get clean
 echo Enable systemd-networkd as network manager
 systemctl enable systemd-networkd
 
+echo Enable autologin for lightdm
+sed -i 's/#autologin-user=/autologin-user=root/' lightdm.conf
+sed -i 's/#autologin-user-timeout=0/autologin-user-timeout=0/' lightdm.conf
+
 echo Set resolv.conf to use systemd-resolved
 rm /etc/resolv.conf
 ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
