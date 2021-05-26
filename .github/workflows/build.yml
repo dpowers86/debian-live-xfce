@@ -1,4 +1,4 @@
-name: "Build Debian Live Minimal ISO"
+name: "Build Debian Live gparted ISO"
 
 on:
   schedule:
@@ -36,7 +36,7 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           automatic_release_tag: "${{ env.DATESTAMP }}"
-          title: "Debian 10 Live Minimal ISO"
+          title: "Debian 10 Live gparted ISO"
           files: |
-            output/debian10-live-minimal-x86_64.iso
+            output/debian10-live-gparted-x86_64.iso
             output/packages.txt
